@@ -1,19 +1,169 @@
 :root{
-    --color-dark: #2C4A52;
-    --color-mid1: #537072;
-    --color-mid2: #8E9B97;
+   --color-dark: #17202e;
+   --color-mid: #465875;
     --color-light: #F4EBDB;
-    --color-offwhite:#f5f3f0;
+    --color-offwhite:#ebeae9;
     --color-accent: #F55449;
 }
 
-h2{
-   font-family: Arial, Helvetica, sans-serif;
-   font-size: 3rem;
-   text-align: center;
-   color: #2C4A52;
+body{
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+    font-weight: 100;
+    background: url(/images/Forrest.png);
+    background-repeat: no-repeat ;
+    background-size: 100% 100%;
+    height: 100vh;
+    background-attachment: fixed;
+    color: var(--color-offwhite);
 }
 
-body{
-    background: #f5f3f0;
+.navbar{
+   margin: 2rem 5rem;
+   padding: 2rem;
+   background: var(--color-dark);
+   display: flex;
+   justify-content: right;
+   border-radius: 20px;
 }
+
+.navbar a{
+    padding: 1rem;
+}
+
+a:link{
+   
+    text-decoration: none;
+    font-family: "roboto",Arial, Helvetica, sans-serif ;
+    font-weight: 300;
+    color: var(--color-offwhite);
+}
+
+a:visited{
+    color: var(--color-offwhite);
+}
+a:hover{
+    font-weight: 400;
+    color:  var(--color-accent);
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+
+}
+a:active{}
+
+.header1{
+   margin-top: 2rem;
+   margin-bottom: 1rem;
+   font-size: 3rem;
+   font-weight: 100;
+   text-align: center;
+   color: var(--color-offwhite);
+   grid-row: 1;
+   grid-column: 1 / 3;
+}
+
+.card{
+    margin: 5rem;
+    background:  var(--color-dark);
+    padding: 2rem;
+    display: grid;
+}
+
+.card__start{
+    grid-template:  30fr 70fr / 1fr 1fr ;
+    border-radius: 20px;
+
+    animation-name: pulse;
+    animation-duration: 1.5s;
+    animation-delay: 0.2s;
+    animation-timing-function: ease-in-out;
+}
+
+.card__portfolio{
+    grid-template:  12fr 88fr / 1fr  ;
+    border-radius: 20px;
+}
+
+
+.card__contact{
+    grid-template:  20fr 80fr / 1fr  ;
+    border-radius: 20px;
+}
+
+.img-face{
+    width: 80%;
+    border-radius: 50px;
+    filter:grayscale(1);
+}
+
+@keyframes pulse {
+    0%{
+        transform: scale(1);
+       background: var(--color-dark);
+    }
+    30%{
+    background: white;
+    }
+    50%{
+        background: white;
+       /* transform: scale(1.05);*/
+    }
+    100%{
+        transform: rotate(0);
+       background: var(--color-dark);
+    }
+    }
+
+    .portfoliolist{
+        list-style-type: none;
+    }
+
+    .projectitem{
+        color: #8E9B97;
+        font-size: 2rem;
+        margin: 2.5rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+       
+    }
+
+    .projectitem a{
+        padding-left: 2rem;
+        font-size: 1.5rem;
+        font-weight: 300;
+    }
+
+    .projectitem img{
+        width: 8rem;
+        border-radius: 10px;
+    }
+
+    .projectitem img:hover{
+        transform: scale(2);
+        transition: transform 0.4s ease-in-out;
+        border: var(--color-accent) 2px solid;
+    }
+
+    .card__contact{
+        justify-content: center;
+    }
+
+    .contactbox{
+        margin: 0rem auto;
+    }
+
+   .contactbox__map{
+    margin-top: 3rem;
+   }
+
+   footer{
+    margin: 0.5rem 5rem;
+    color: var(--color-mid);
+    position: fixed;
+    bottom:0;
+   }
+
+   hr{
+    border: #465875 solid 1px;
+   }
+   
